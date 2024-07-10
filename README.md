@@ -1,5 +1,5 @@
 # Video Preview Generator
-Generate a short preview of a single video, or generate multiple at once! This tool gives you the power to break up your video into many short miniclips, fully customizable for that ultimate preview experience. [View Example.](#examplesect)
+Generate a short preview of a single video, or generate multiple at once! This tool gives you the power to break up your video into many short miniclips, fully customizable in how long or how many there are for that ultimate preview experience. [View Example.](#examplesect)
 ## What You Need
 * Works natively with Linux and MacOS terminal
 * Windows users must install a Unix-like environment terminal such as [Git for Windows](https://gitforwindows.org/) or use the native [Windows Subsystem for Linux](https://superuser.com/a/1059340)
