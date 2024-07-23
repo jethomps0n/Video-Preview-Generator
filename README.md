@@ -7,7 +7,7 @@ Generate a short preview of a single video, or generate multiple at once! This t
   * <details>
       <br>
       <summary>For MacOS Users</summary>
-      <p>Additionally, MacOS users may have to install the line of code below for access to full codec and encoding functionality:</p>
+      <p>Additionally, MacOS users may have to download <a href="https://brew.sh/">Homebrew</a> and install the line of code below for access to full codec and encoding functionality:</p>
       <code>brew install ffmpeg --with-fdk-aac --with-ffplay --with-freetype --with-frei0r --with-libass --with-libvo-aacenc --with-libvorbis --with-libvpx --with-opencore-amr --with-openjpeg --with-opus --with-rtmpdump --with-speex --with-theora --with-tools --with-libvorbis</code>
     </details>
 ## Features
