@@ -7,8 +7,10 @@ Generate a short preview of a single video, or generate multiple at once! This t
   * <details>
       <br>
       <summary>For MacOS Users</summary>
-      <p>Additionally, MacOS users may have to download <a href="https://brew.sh/">Homebrew</a> and install the line of code below for access to full codec and encoding functionality:</p>
-      <code>brew install ffmpeg --with-fdk-aac --with-ffplay --with-freetype --with-frei0r --with-libass --with-libvo-aacenc --with-libvorbis --with-libvpx --with-opencore-amr --with-openjpeg --with-opus --with-rtmpdump --with-speex --with-theora --with-tools --with-libvorbis</code>
+      <p>MacOS users may have to download <a href="https://brew.sh/">Homebrew</a> and install ffmpeg via the lines of code below for access to full codec and encoding functionality:</p>
+      <pre><code>brew tap homebrew-ffmpeg/ffmpeg</code></pre>
+      <pre><code>brew install homebrew-ffmpeg/ffmpeg/ffmpeg --with-fdk-aac --with-opencore-amr --with-openh264 --with-openjpeg --with-speex --HEAD</code></pre>
+      <em>For additional information regarding this ffmpeg installation, click <a href="https://github.com/homebrew-ffmpeg/homebrew-ffmpeg">here</a></em>
     </details>
 ## Features
 This project builds upon the [original](#creditssect), but also expands upon it in many ways. The program is increasingly customizable, offering the ability to change a wide set of parameters without having to go into the file itself.
@@ -28,7 +30,7 @@ This command can be run from ANYWHERE! It works with folders and file names with
 
 To run, replace the `/path/to/...` section with the directory to where you have the `preview.sh` file located:
 ```
-$ /path/to/preview.sh
+/path/to/preview.sh
 ```
 And that's it! The rest is pretty straightforward from there.
 
@@ -89,9 +91,9 @@ Ex. input.mp4 output.webm  -OR-  input.mp4 .webm
 ### Contributing
 If you would like to help add or improve a feature within this project in any way, follow the steps below:
 1. Fork the project!
-2. Create your new branch: `$ git checkout -b my-new-branch`
-4. Add and commit your changes: `$ git commit -m "Add new supercool feature"`
-5. Push to the branch: `$ git push origin my-new-branch`
+2. Create your new branch: `git checkout -b my-new-branch`
+4. Add and commit your changes: `git commit -m "Add new supercool feature"`
+5. Push to the branch: `git push origin my-new-branch`
 6. Submit a pull request!
 ### Discussions & Issues
 To engage with the community or for more information, write about it in the Discussions tab.
