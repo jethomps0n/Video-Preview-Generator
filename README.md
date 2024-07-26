@@ -40,7 +40,7 @@ And that's it! The rest is pretty straightforward from there. This command can b
 Here is an example as to what the first page looks like after you run:
 ```
 [*]     Video Preview Generator                                  [*]
-[*]     Version : 1.0.0                                          [*]
+[*]     Version : 1.0.1                                          [*]
 [*]     Originally Created By : David Walsh (davidwalshblog)     [*]
 [*]     Modified & Developed By : Jonathan Thompson (jethomps0n) [*]
 
