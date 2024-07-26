@@ -9,7 +9,7 @@ Generate a short preview of a single video, or generate multiple at once! This t
       <summary>For MacOS Users</summary>
       <p>MacOS users may have to download <a href="https://brew.sh/">Homebrew</a> and install ffmpeg via the lines of code below for access to full codec and encoding functionality:</p>
       <pre><code>brew tap homebrew-ffmpeg/ffmpeg</code></pre>
-      <pre><code>brew install homebrew-ffmpeg/ffmpeg/ffmpeg --with-fdk-aac --with-opencore-amr --with-openh264 --with-openjpeg --with-speex --HEAD</code></pre>
+      <pre><code>brew install homebrew-ffmpeg/ffmpeg/ffmpeg --with-fdk-aac --with-opencore-amr --with-openh264 --with-openjpeg --with-speex</code></pre>
       <em>For additional information regarding this ffmpeg installation, click <a href="https://github.com/homebrew-ffmpeg/homebrew-ffmpeg">here</a></em>
     </details>
 ## Features
