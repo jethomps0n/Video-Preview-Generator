@@ -26,13 +26,16 @@ This project builds upon the [original](#creditssect), but also expands upon it 
 ## How to Use
 Download the `preview.sh` file.
 
-This command can be run from ANYWHERE! It works with folders and file names with both spaces and without spaces.
+Make the file executable. You only need to do this once:
+```
+chmod +x /path/to/preview.sh
+```
 
-To run, replace the `/path/to/...` section with the directory to where you have the `preview.sh` file located:
+Now run it:
 ```
 /path/to/preview.sh
 ```
-And that's it! The rest is pretty straightforward from there.
+And that's it! The rest is pretty straightforward from there. This command can be run from ANYWHERE! It works with folders and file names with both spaces and without spaces.
 
 Here is an example as to what the first page looks like after you run:
 ```
