@@ -9,7 +9,7 @@ Generate a short preview of a single video, or generate multiple at once! This t
       <summary>For MacOS Users</summary>
       <p>MacOS users may have to download <a href="https://brew.sh/">Homebrew</a> and install ffmpeg via the lines of code below for access to full codec and encoding functionality:</p>
       <pre><code>brew tap homebrew-ffmpeg/ffmpeg</code></pre>
-      <pre><code>brew install homebrew-ffmpeg/ffmpeg/ffmpeg --with-fdk-aac --with-opencore-amr --with-openh264 --with-openjpeg --with-speex --HEAD</code></pre>
+      <pre><code>brew install homebrew-ffmpeg/ffmpeg/ffmpeg --with-fdk-aac --with-opencore-amr --with-openh264 --with-openjpeg --with-speex</code></pre>
       <em>For additional information regarding this ffmpeg installation, click <a href="https://github.com/homebrew-ffmpeg/homebrew-ffmpeg">here</a></em>
     </details>
 ## Features
@@ -26,13 +26,16 @@ This project builds upon the [original](#creditssect), but also expands upon it 
 ## How to Use
 Download the `preview.sh` file.
 
-This command can be run from ANYWHERE! It works with folders and file names with both spaces and without spaces.
+Make the file executable. You only need to do this once:
+```
+chmod +x /path/to/preview.sh
+```
 
-To run, replace the `/path/to/...` section with the directory to where you have the `preview.sh` file located:
+Now run it:
 ```
 /path/to/preview.sh
 ```
-And that's it! The rest is pretty straightforward from there.
+And that's it! The rest is pretty straightforward from there. This command can be run from ANYWHERE! It works with folders and file names with both spaces and without spaces.
 
 Here is an example as to what the first page looks like after you run:
 ```

@@ -1,10 +1,11 @@
 #!/bin/bash
-# For macOS, please install the line below:
-# brew install ffmpeg --with-fdk-aac --with-ffplay --with-freetype --with-frei0r --with-libass --with-libvo-aacenc --with-libvorbis --with-libvpx --with-opencore-amr --with-openjpeg --with-opus --with-rtmpdump --with-speex --with-theora --with-tools --with-libvorbis
+# For macOS, please make sure you have downloaded Homebrew (https://brew.sh/) and have installed ffmpeg via the lines below:
+# brew tap homebrew-ffmpeg/ffmpeg
+# brew install homebrew-ffmpeg/ffmpeg/ffmpeg --with-fdk-aac --with-opencore-amr --with-openh264 --with-openjpeg --with-speex
 
 # --------------------------------------------------------- #
 # | Video Preview Generator                               | #
-# | Version: 1.0.0                                        | #
+# | Version: 1.0.1                                        | #
 # | https://github.com/jethomps0n/Video-Preview-Generator | #
 # --------------------------------------------------------- #
 
@@ -426,10 +427,10 @@ function generate_single() {
     sixth=$((length/6))  # | A sixth of the video length in seconds
 
     echo ""
-    echo 'Video length: ' $length
+    echo 'Video length: ' $length 'seconds'
     length=$(($length - $endseconds ))
     length=$(($length-$startseconds))
-    echo 'Video length with trimmed seconds: ' $length
+    echo 'Video length with trimmed seconds: ' $length 'seconds'
     echo ""
     
     if [ "$length" -lt "$minlength" ]; then
@@ -607,10 +608,10 @@ function generate_batch() {
         sixth=$((length/6))  # | A sixth of the video length in seconds
 
         echo ""
-        echo 'Video length: ' $length
+        echo 'Video length: ' $length 'seconds'
         length=$(($length - $endseconds ))
         length=$(($length-$startseconds))
-        echo 'Video length with trimmed seconds: ' $length
+        echo 'Video length with trimmed seconds: ' $length 'seconds'
         echo ""
         
         if [ "$length" -lt "$minlength" ]
@@ -958,7 +959,7 @@ function start() {
 
     echo ""
     echo "[*]     Video Preview Generator                                  [*]"
-    echo "[*]     Version : 1.0.0                                          [*]"
+    echo "[*]     Version : 1.0.1                                          [*]"
     echo "[*]     Originally Created By : David Walsh (davidwalshblog)     [*]"
     echo "[*]     Modified & Developed By : Jonathan Thompson (jethomps0n) [*]"
     echo ""
