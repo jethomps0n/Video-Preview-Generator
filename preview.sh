@@ -1,11 +1,11 @@
 #!/bin/bash
-# For macOS, please make sure you have downloaded Homebrew (https://brew.sh/) and have installed ffmpeg via the lines below:
+# For MacOS, please make sure you have downloaded Homebrew (https://brew.sh/) and have installed ffmpeg via the lines below:
 # brew tap homebrew-ffmpeg/ffmpeg
 # brew install homebrew-ffmpeg/ffmpeg/ffmpeg --with-fdk-aac --with-opencore-amr --with-openh264 --with-openjpeg --with-speex
 
 # --------------------------------------------------------- #
 # | Video Preview Generator                               | #
-# | Version: 1.0.1                                        | #
+# | Version: 1.0.2                                        | #
 # | https://github.com/jethomps0n/Video-Preview-Generator | #
 # --------------------------------------------------------- #
 
@@ -17,7 +17,6 @@ back="b" # --------- | Input to return to the previous step in the process.
 continue="c" # ----- | Input to continue to the next step in the process.
 settings="s" # ----- | Input to enter 'Settings'.
 advancedtoggle="a" # | Input to toggle 'Advanced Mode'.
-isadvanced=false # - | Value to check if 'Advanced Mode' is active.
 currentval="d" # --- | Input to keep the current 'Settings' element.
 
 #--------DEFAULT INPUT VALUES--------#
@@ -42,6 +41,7 @@ resolution="useinput" # | ffmpeg 'filter:v scale' value for encoding the output 
 
 #---------CONSTANT VARIABLES (Probably Shouldn't Change)--------#
 re="^[0-9]+([.][0-9]+)?$" # ------------------ | A regular expression to find any character that is not a digit.
+isadvanced=false # --------------------------- | Value to check if 'Advanced Mode' is active.
 minlength=$(($minicliplength*$numminiclips)) # | The minimum length in seconds a given input file (after
                                              # | parameters are applied) must be to generate a preview.
 tempdir=miniclips # -------------------------- | The name of the temporary folder directory where the miniclips
@@ -68,7 +68,7 @@ elif [ ! "${outputfolderpath: -1}" == "/" ]; then
     outputfolderpath="$outputfolderpath/"
 fi
 
-if [ "${audiotoggle,,}" == "on" ]; then
+if [ "$(echo "$audiotoggle" | tr '[:upper:]' '[:lower:]')" == "on" ]; then
     Audio=""
 else
     audiotoggle="off"
@@ -291,10 +291,10 @@ function modify_encoder_settings() {
 
     if [ "$newaudiotoggle" == "$currentval" ]; then
         audiotoggle=$audiotoggle
-    elif [ "${newaudiotoggle,,}" == "on" ]; then
+    elif [ "$(echo "$newaudiotoggle" | tr '[:upper:]' '[:lower:]')" == "on" ]; then
         audiotoggle=$newaudiotoggle
         Audio=""
-    elif [ "${newaudiotoggle,,}" == "off" ]; then
+    elif [ "$(echo "$newaudiotoggle" | tr '[:upper:]' '[:lower:]')" == "off" ]; then
         audiotoggle=$newaudiotoggle
         Audio="-an"
     elif [ "$newaudiotoggle" == "$back" ]; then
@@ -484,9 +484,9 @@ function generate_single() {
     echo ""
     echo -n "Would you like to generate another file? [y/N]: "; read response
 
-    if [ "${response,,}" = "y" ]; then
+    if [ "$(echo "$response" | tr '[:upper:]' '[:lower:]')" = "y" ]; then
         generate_single
-    elif [ "${response,,}" = "n" ]; then
+    elif [ "$(echo "$response" | tr '[:upper:]' '[:lower:]')" = "n" ]; then
         echo ""
         echo ""
         echo "Thank you for using my tool!"
@@ -667,9 +667,9 @@ function generate_batch() {
     echo ""
     echo -n "Would you like to generate another batch? [y/N]: "; read response
 
-    if [ "${response,,}" = "y" ]; then
+    if [ "$(echo "$response" | tr '[:upper:]' '[:lower:]')" = "y" ]; then
         generate_batch
-    elif [ "${response,,}" = "n" ]; then
+    elif [ "$(echo "$response" | tr '[:upper:]' '[:lower:]')" = "n" ]; then
         echo ""
         echo ""
         echo "Thank you for using my tool!"
@@ -734,8 +734,8 @@ function modify_settings() {
     endpre=$endseconds
     numminipre=$numminiclips
 
-    echo "To insert a drive letter, use semicolon format"
-    echo "Ex. C:/folder1/folder2/..."
+    echo "         -Windows-                          -MacOS-"
+    echo "Ex. C:/folder1/folder2/...   Ex. /Volumes/Macintosh HD/folder1/..."
     echo "------------------------------------------------"
     echo '(Type "d" to keep current value)'
     echo -n "Insert new input folder path: "; read newinputfolderpath
@@ -959,7 +959,7 @@ function start() {
 
     echo ""
     echo "[*]     Video Preview Generator                                  [*]"
-    echo "[*]     Version : 1.0.1                                          [*]"
+    echo "[*]     Version : 1.0.2                                          [*]"
     echo "[*]     Originally Created By : David Walsh (davidwalshblog)     [*]"
     echo "[*]     Modified & Developed By : Jonathan Thompson (jethomps0n) [*]"
     echo ""
