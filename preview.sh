@@ -20,8 +20,9 @@ advancedtoggle="a" # | Input to toggle 'Advanced Mode'.
 currentval="d" # --- | Input to keep the current 'Settings' element.
 
 #--------DEFAULT INPUT VALUES--------#
-# | IMPORTANT: To insert a drive letter, use semicolon format as modeled below.
-# | Ex. C:/folder1/folder2/...
+# | IMPORTANT: To insert a path to a drive, use the format as modeled below.
+# |           -Windows-                          -MacOS-
+# |  Ex. C:/folder1/folder2/...   Ex. /Volumes/Macintosh HD/folder1/...
 inputfolderpath="./" # ------- | The folder path where the input file is located.
 outputfolderpath="./" # ------ | The folder path where the output file/folder will go.
 outputfoldername="previews/" # | Creates a subfolder within the output folder path
